@@ -5,12 +5,12 @@ class Verify:
 
      def __init__(self):
         pass
-     def verifica_textos1(self,resposta):
+     def verifica_textos(self,resposta):
         self.resposta = resposta
         quest = ['a','b','c']
         if resposta not in quest:
             print('Digite uma opção válida')
-            return questionText1
+            return False
         else:
             return resposta
 
@@ -59,33 +59,31 @@ def perguntas3():
     questionText3 = str(input('\nDurante o perído da pandemia, você notou se alguma pessoa próxima desenvolver\n ou agravar a depressão ou alguma doença semelhante ?\na) Sim\nb) Não\nc)Não Sei\n Digite a opção correspondente:  '))
     questionText4 = str(input('\nVocê consideraria buscar apoio psicológico para ajudar essa ou essas pessoas ?\na) Sim\nb) Não\nc)Não Sei\n Digite a opção correspondente:  '))
     # question1 retorna apenas a letra da resposta
-    question1 = Verify.verifica_textos(questionText1)
-    verfalse(questionText1)
-    question2 = Verify.verifica_textos(questionText2)
+    if Verify.verifica_textos(questionText1) == False:
+        return questionText1
     verfalse(questionText2)
-    question3 = Verify.verifica_textos(questionText3)
     verfalse(questionText3)
-    question4 = Verify.verifica_textos(questionText4)
     verfalse(questionText4)
 
-
-    data['answers1'].append(question1)
-    data['answers2'].append(question2)
-    data['answers3'].append(question3)
-    data['answers4'].append(question4)
+    data['answers1'].append(questionText1)
+    data['answers2'].append(questionText2)
+    data['answers3'].append(questionText3)
+    data['answers4'].append(questionText4)
     data['dateAnswer'].append(datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"))
     print('\nO Instituto agradece a participção de todos!')
 
 def verfalse(question):
-    if question == False:
+    quest = ['a','b','c']
+    if question not in quest:
+        print('Digite uma opção válida')
+        return False   
+    else:
         return question
 
 #armazena o número de entrevistados (opcional)
 numberAnswers = len(data['ages'])   
 
 perguntas()
-
-
 
 #Bloco para salvar csv
 sheet = pd.DataFrame.from_dict(data,orient='index')
