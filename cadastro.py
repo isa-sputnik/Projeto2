@@ -1,38 +1,22 @@
 import datetime
-from sre_parse import State
-from types import CoroutineType
 import pandas as pd
 
-# class Verify:
+class Verify:
 
-#     def __init__(self):
-#         pass
-#     def verifica_textos(self,resposta):
-#         self.resposta = resposta
-#         if resposta 
-#         pass
-
-'''
-     #função que verifica a validade da resposta
-    def verify ():
-        a = int(input())
-        while a != 1 and a != 2 and a != 3:
-            print('\nResposta inválida! Insira uma resposta correta... ')
-            a = int(input())
+     def __init__(self):
+        pass
+     def verifica_textos1(self,resposta):
+        self.resposta = resposta
+        quest = ['a','b','c']
+        if resposta not in quest:
+            print('Digite uma opção válida')
+            return questionText1
         else:
-            return a
-    '''
+            return resposta
 
-#bloco para inserir o texto das perguntas (opcional)
-questionText1 = '\nPergunta 1'
-questionText2 = '\nPergunta 2'
-questionText3 = '\nPergunta 3'
-questionText4 = '\nPergunta 4'
-
-#dicionários que armazenam os dados
 data = {
-    'city':'',
-    'state':'',
+    'city':[],
+    'state':[],
     'ages':[],
     'genres':[],
     'answers1':[],
@@ -42,8 +26,12 @@ data = {
     'dateAnswer':[],
 }
 
+# colunas = dados acima
+# perguntas = 'answer': [a ou b ou c]
+
 
 def perguntas():
+    
     state = input('\nEm qual estado você mora ? ')
     city = input('\nQual a sua cidade ?  ')
     age = int(input('\nQual a sua idade ? ')) 
@@ -51,34 +39,53 @@ def perguntas():
         print('Por favor, digite um valor válido para a idade.')
         perguntas()
     else:
-        genre = input('\nQual o seu gênero [M/F] ? ')
-        if genre != 'M'.lower() or 'F'.lower():
-            print("Digite apenas os caracteres correspondentes!")
-        print(questionText1)
-        question1 = Verify.verifica(question1)
-        print(questionText2)
-        question2 = Verify.verifica(question2)
-        print(questionText3)
-        question3 = Verify.verifica(question3)
-        print(questionText4)
-        question4 = Verify.verifica(question4)
-
         data['state'].append(state)
         data['city'].append(city)
         data['ages'].append(age)
+        perguntas2()
+
+def perguntas2():
+    genre = input('\nQual o seu gênero [M/F] ? ')
+    if genre == 'M'.lower() or 'F'.lower():
         data['genres'].append(genre)
-        data['answers1'].append(question1)
-        data['answers2'].append(question2)
-        data['answers3'].append(question3)
-        data['answers4'].append(question4)
-        data['dateAnswer'].append(datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"))
+        perguntas3()
+    else:
+        print("Digite apenas os caracteres correspondentes!")
+        perguntas2()
+
+def perguntas3():
+    questionText1 = str(input('\nVocê já concluiu o Ensino Médio ?\na) Sim\nb) Não\nc)Não Sei\n Digite a opção correspondente:  '))
+    questionText2 = str(input('\nA média salarial da sua residência ultrapassa os R$ 2.000 mensais ?\na) Sim\nb) Não\nc)Não Sei\n Digite a opção correspondente: '))
+    questionText3 = str(input('\nDurante o perído da pandemia, você notou se alguma pessoa próxima desenvolver\n ou agravar a depressão ou alguma doença semelhante ?\na) Sim\nb) Não\nc)Não Sei\n Digite a opção correspondente:  '))
+    questionText4 = str(input('\nVocê consideraria buscar apoio psicológico para ajudar essa ou essas pessoas ?\na) Sim\nb) Não\nc)Não Sei\n Digite a opção correspondente:  '))
+    # question1 retorna apenas a letra da resposta
+    question1 = Verify.verifica_textos(questionText1)
+    verfalse(questionText1)
+    question2 = Verify.verifica_textos(questionText2)
+    verfalse(questionText2)
+    question3 = Verify.verifica_textos(questionText3)
+    verfalse(questionText3)
+    question4 = Verify.verifica_textos(questionText4)
+    verfalse(questionText4)
+
+
+    data['answers1'].append(question1)
+    data['answers2'].append(question2)
+    data['answers3'].append(question3)
+    data['answers4'].append(question4)
+    data['dateAnswer'].append(datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%S"))
+    print('\nO Instituto agradece a participção de todos!')
+
+def verfalse(question):
+    if question == False:
+        return question
 
 #armazena o número de entrevistados (opcional)
 numberAnswers = len(data['ages'])   
 
 perguntas()
 
-print('\nO Instituto agradece a participção de todos!')
+
 
 #Bloco para salvar csv
 sheet = pd.DataFrame.from_dict(data,orient='index')
