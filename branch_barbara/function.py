@@ -27,7 +27,3 @@ def input_text(input_msg_text):
         if digit:
             break
     return message
-
-# def input_dict(_dict):
-#     _dict = {1:'Sim', 2:'Não', 3: 'Não sei'}
-#     _dict = _dict[_dict]
