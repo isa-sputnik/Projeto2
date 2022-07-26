@@ -1,6 +1,4 @@
 import pandas as pd
-import csv
-import os
 from datetime import datetime, date
 from function import input_number
 
@@ -73,10 +71,14 @@ def Question():
     df_columns['hour'].append(dt_time)
 
     Question()
-  
+    
 if input_init == 1:
     Question()
         
 elif input_init == 2:
     print('\nQuestionário encerrado.')
+    exit()
+
+else:
+    print('\nEntrada inválida. Questionário encerrado.')
     exit()
