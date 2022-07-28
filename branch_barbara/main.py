@@ -10,7 +10,7 @@ input_init = input_number('Bem-vindo(a) ao questionário de saúde mental. \n\nD
 
 while conditions:
     if input_init == 1:
-        
+    
         age = input_number('\nInforme sua idade em números (caso deseje encerrar a pesquisa, digite 0): ')
 
         if age == 0:
