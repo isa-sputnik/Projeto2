@@ -18,7 +18,7 @@ Este projeto foi feito como parte integrante da avaliação do Módulo 2 do curs
 
 ## Descrição do Projeto
 
-Este é um projeto é um instrumento de pesquisa digital com a população de várias cidades do Brasil com o objetivo de armazenar os dados da pesquisa realizada em um arquivo .csv para utilização em análises futuras. Na realização da pesquisa a equipe sairá com o projeto nas ruas para coletar as respostas.
+Este é um projeto é representa um instrumento de pesquisa digital com a população de várias cidades do Brasil com o objetivo de armazenar os dados da pesquisa realizada em um arquivo .csv para utilização em análises futuras. Na realização da pesquisa a equipe sairá com o projeto nas ruas para coletar as respostas.
 
 ### Tema abordado
 
@@ -26,7 +26,7 @@ A Organização Mundial da Saúde (OMS) publicou em 18 de março de 2019 um rela
 
 Este relatório destaca que existem muitas formas diferentes de estresse, como dificuldades financeiras ou separações familiares devido à migração. Além disso, há um aumento no isolamento social, o que pode levar a depressão ou distúrbios de ansiedade.[^1]
 
-A partir desta temática nossa pesquisa procura identificar o impacto da pandemia na saúde mental da população, a partir da comparação da escala de casos de depressão antes e pós pandemia. 
+A partir desta temática nossa pesquisa procura simular a identificação do impacto da pandemia na saúde mental da população, a partir da comparação da escala de casos de depressão antes e pós pandemia. 
 
 Como base de dados para comparação inicial temos valores de casos de depressão documentados até o ano de 2019, sintetizado neste gráfico.
 
