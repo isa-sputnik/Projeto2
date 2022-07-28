@@ -1,7 +1,7 @@
 import pandas as pd
 from datetime import datetime
 from question import OpeningQuestion
-from function import input_number, input_text, input_number_limit, separator
+from function import input_number, input_text, input_number_limit
 
 df_response = []
 conditions = True
