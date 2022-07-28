@@ -1,7 +1,7 @@
 
 # <font color="#DAA520">Resilia - Projeto do Módulo-2</font>
 
-![](https://raw.githubusercontent.com/isa-sputnik/Projeto2/main/)
+![](https://raw.githubusercontent.com/isa-sputnik/Projeto2/main/capa.png)
 
 ## Objetivo do Projeto
 
@@ -62,7 +62,7 @@ seja informada, assim finalizando a pesquisa e gerando um arquivo de saída .csv
 
 #### Validação de dados
 		
-- As
+- Existem duas validações de entrada no código, que estão em funções: uma para o caso do input ser um inteiro ou uma string. No caso, se eu desejo que minha entrada seja um inteiro, meu código só aceita esse tipo de entradas, e em caso de outro tipo, ele entra em um loop, informando que a entrada está no formato incorreto e pedindo para o usuário inserir uma entrada válida. O mesmo se aplica a entrada de texto: se o usuário entrar com um número, entra no loop, até ser fornecido uma entrada do tipo string.
 
 ### Referências
 
