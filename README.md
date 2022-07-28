@@ -30,7 +30,7 @@ Este relatório destaca que existem muitas formas diferentes de estresse, como d
 
 A partir desta temática nossa pesquisa procura simular a identificação do impacto da pandemia na saúde mental da população, a partir da comparação da escala de casos de depressão antes e pós pandemia. 
 
-Como base de dados para comparação inicial temos valores de casos de depressão documentados até o ano de 2019, sintetizado neste gráfico.
+Como base de dados para comparação inicial temos valores de casos de depressão documentados até o ano de 2019, sintetizados neste gráfico.
 
 ![](https://raw.githubusercontent.com/isa-sputnik/Projeto2/main/PESSOAS%20COM%20DEPRESSÃO%20(MILHÕES)%20X%20ANO.png)
 
