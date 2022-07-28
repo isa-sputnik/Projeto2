@@ -13,7 +13,9 @@ Este projeto foi feito como parte integrante da avaliação do Módulo 2 do curs
 
 - Luiza Sampaio;
 
-- Thiago Vasconcelos
+- Stephanie Fernandes;
+
+- Thiago Vasconcelos.
 
 
 ## Descrição do Projeto
