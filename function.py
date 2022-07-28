@@ -1,6 +1,6 @@
 def separator():
     
-    print('\n---------------------------------------------------------------------------------------------------------')
+    print('\n------------------------------------------------------------------------------------------------------')
 
 def input_number(input_msg_number):
     digit = False
@@ -13,6 +13,7 @@ def input_number(input_msg_number):
         else:
             print('\nDigite um valor de entrada válido.')
         if digit:
+            separator()
             break
     return valor
 
@@ -28,6 +29,7 @@ def input_number_limit(input_msg_number):
             else:
                 print('\nDigite um valor de entrada válido.')
             if digit:
+                separator()
                 break
     return valor
 
@@ -40,5 +42,6 @@ def input_text(input_msg_text):
         else:
             print('\nDigite uma mensagem válida.')
         if digit:
+            separator()
             break
     return message

@@ -7,13 +7,10 @@ df_response = []
 conditions = True
 
 input_init = input_number('\nBem-vindo(a) ao questionário de saúde mental. \n\nDeseja iniciar o questionário? \n\n1 - Sim \n2 - Não \n\nDigite aqui: ')
-separator()
-
 while conditions:
     if input_init == 1:
         
         age = input_number('\nInforme sua idade em números (caso deseje encerrar a pesquisa, digite 0): ')
-        separator()
 
         if age == 0:
             print('\nIdade 0 informada. Encerrando o questionário.')
@@ -28,17 +25,11 @@ while conditions:
             exit()
         
         name = input_text('\nInforme seu nome: ')
-        separator()
-        genre = input_number_limit('\nInforme seu gênero. \n\n1 - Cisgênero \n2 - Transgênero \n3 - Não-binário \n\nDigite aqui: ') 
-        separator()       
+        genre = input_number_limit('\nInforme seu gênero. \n\n1 - Cisgênero \n2 - Transgênero \n3 - Não-binário \n\nDigite aqui: ')        
         schooling = input_number_limit(f'\nVocê concluiu o ensino médio? \n\n1 - Sim \n2 - Não \n3 - Não Sei \n\nDigite aqui: ')
-        separator()
         average_wage = input_number_limit(f'\nSua média salarial ultrapassa 2 salários mínimos? \n\n1 - Sim \n2 - Não \n3 - Não Sei \n\nDigite aqui: ')
-        separator()
         illness = input_number_limit(f'\nDurante o período de pandemia, você ou alguém próximo, sofreu com alguma doença psicológica, agravada pelo isolamento social? \n\n1 - Sim \n2 - Não \n3 - Não Sei \n\nDigite aqui: ')
-        separator()
         assist = input_number_limit(f'\nVocê consideraria procurar uma rede de apoio como forma de auxilio? \n\n1 - Sim \n2 - Não \n3 - Não Sei \n\nDigite aqui: ')
-        separator()
         
         genre_dict = {1:'Cisgênero', 2:'Transgênero', 3: 'Não-binário'}
         questions_dict = {1:'Sim', 2:'Não', 3: 'Não Sei'}
