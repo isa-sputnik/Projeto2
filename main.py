@@ -1,7 +1,7 @@
 import pandas as pd
 from datetime import datetime
 from question import OpeningQuestion
-from function import input_number, input_text
+from function import input_number, input_text, input_number_limit
 
 df_response = []
 conditions = True
@@ -26,11 +26,11 @@ while conditions:
             exit()
         
         name = input_text('\nInforme seu nome: ')
-        genre = input_number('\nInforme seu gênero. \n\n1 - Cisgênero \n2 - Transgênero \n3 - Não-binário \n\nDigite aqui: ')
-        schooling = input_number(f'\nVocê concluiu o ensino médio? \n\n1 - Sim \n2 - Não \n3 - Não Sei \n\nDigite aqui: ')
-        average_wage = input_number(f'\nSua média salarial ultrapassa 2 salários mínimos? \n\n1 - Sim \n2 - Não \n3 - Não Sei \n\nDigite aqui: ')
-        illness = input_number(f'\nDurante o período de pandemia, você ou alguém próximo, sofreu com alguma doença psicológica, agravada pelo isolamento social? \n\n1 - Sim \n2 - Não \n3 - Não Sei \n\nDigite aqui: ')
-        assist = input_number(f'\nVocê consideraria procurar uma rede de apoio como forma de auxilio? \n\n1 - Sim \n2 - Não \n3 - Não Sei \n\nDigite aqui: ')
+        genre = input_number_limit('\nInforme seu gênero. \n\n1 - Cisgênero \n2 - Transgênero \n3 - Não-binário \n\nDigite aqui: ')        
+        schooling = input_number_limit(f'\nVocê concluiu o ensino médio? \n\n1 - Sim \n2 - Não \n3 - Não Sei \n\nDigite aqui: ')
+        average_wage = input_number_limit(f'\nSua média salarial ultrapassa 2 salários mínimos? \n\n1 - Sim \n2 - Não \n3 - Não Sei \n\nDigite aqui: ')
+        illness = input_number_limit(f'\nDurante o período de pandemia, você ou alguém próximo, sofreu com alguma doença psicológica, agravada pelo isolamento social? \n\n1 - Sim \n2 - Não \n3 - Não Sei \n\nDigite aqui: ')
+        assist = input_number_limit(f'\nVocê consideraria procurar uma rede de apoio como forma de auxilio? \n\n1 - Sim \n2 - Não \n3 - Não Sei \n\nDigite aqui: ')
         
         genre_dict = {1:'Cisgênero', 2:'Transgênero', 3: 'Não-binário'}
         questions_dict = {1:'Sim', 2:'Não', 3: 'Não Sei'}
